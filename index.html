@@ -49,12 +49,13 @@
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid #1a2a3a;
+            flex-wrap: wrap;
         }
 
         nav a {
             color: #c5a059;
             text-decoration: none;
-            margin: 0 20px;
+            margin: 5px 20px;
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -74,7 +75,7 @@
         }
 
         section {
-            margin-bottom: 80px;
+            margin-bottom: 100px;
         }
 
         h2 {
@@ -135,12 +136,57 @@
             margin-bottom: 8px;
         }
 
-        /* Hierarchy Styles */
-        .rank-box {
+        /* Hierarchy & Laws Styles */
+        .rank-box, .law-box {
             background: rgba(197, 160, 89, 0.05);
             border-left: 4px solid #c5a059;
             padding: 20px;
             margin-bottom: 15px;
+            transition: 0.3s;
+        }
+        
+        .law-box:hover {
+            background: rgba(197, 160, 89, 0.1);
+        }
+
+        .law-title {
+            color: #c5a059;
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .judgment {
+            color: #7a94a8;
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-top: 8px;
+            display: block;
+        }
+
+        /* Language Table */
+        .lang-container {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .lang-row {
+            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .elvish {
+            color: #c5a059;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .translation {
+            color: #7a94a8;
         }
 
         /* Footer & Buttons */
@@ -183,6 +229,8 @@
     <a href="#about">The Realm</a>
     <a href="#locations">Locations</a>
     <a href="#ranks">Hierarchy</a>
+    <a href="#laws">High Laws</a>
+    <a href="#language">Elven Tongue</a>
     <a href="#join">Join Us</a>
 </nav>
 
@@ -200,7 +248,6 @@
     <section id="locations">
         <h2>The Sacred Landmarks</h2>
         <div class="location-grid">
-
             <div class="card">
                 <img src="The Council Room.jpg" alt="The Council Room">
                 <div class="card-content">
@@ -209,7 +256,6 @@
                     <p>The place where the fate of Middle-earth is decided. A silent chamber for deep wisdom and high-level meetings of the Elven Lords.</p>
                 </div>
             </div>
-
             <div class="card">
                 <img src="The Great Keep.jpg" alt="The Great Keep">
                 <div class="card-content">
@@ -218,7 +264,6 @@
                     <p>The majestic center of our city. Standing tall as a beacon of hope and the primary residence for the Elven lineage in Imladris.</p>
                 </div>
             </div>
-
             <div class="card">
                 <img src="The Grand Circle.jpg" alt="The Grand Circle">
                 <div class="card-content">
@@ -227,7 +272,6 @@
                     <p>A beautifully designed circular plaza where citizens gather to celebrate and share the news of the realm under the open sky.</p>
                 </div>
             </div>
-
             <div class="card">
                 <img src="The Great Wall Of Rivendell.jpg" alt="The Great Wall">
                 <div class="card-content">
@@ -236,7 +280,6 @@
                     <p>Our formidable defense. This great structure ensures the valley remains hidden and safe from the growing shadows of the east.</p>
                 </div>
             </div>
-
             <div class="card">
                 <img src="The Public Chambers.jpg" alt="The Public Chambers">
                 <div class="card-content">
@@ -245,7 +288,6 @@
                     <p>The heart of our social life. Where the citizens of Rivendell sleep, rest, and engage in noble roleplay events.</p>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -266,6 +308,103 @@
         <div class="rank-box">
             <strong>Citizen of Rivendell</strong><br>
             The noble people who bring life and RP to the Public Chambers.
+        </div>
+    </section>
+
+    <section id="laws">
+        <h2>The High Laws of Rivendell</h2>
+        <div class="law-box">
+            <span class="law-title">Law of Sanctuary</span>
+            Rivendell is a place of refuge. No violence, pursuit, or hostile intent may be carried into the Valley.
+            <span class="judgment">Judgment: Removal from Rivendell or direct judgment by Lord Elrond.</span>
+        </div>
+        <div class="law-box">
+            <span class="law-title">Law of Lore</span>
+            All knowledge shared must be truthful and respectful of the ancient records. Forbidden or sealed lore may not be accessed without permission.
+            <span class="judgment">Judgment: Restricted library access or service within the archives.</span>
+        </div>
+        <div class="law-box">
+            <span class="law-title">Law of Tranquility</span>
+            The peace of Imladris shall not be broken by needless quarrel, disorder, or reckless noise.
+            <span class="judgment">Judgment: Temporary removal from gatherings or halls.</span>
+        </div>
+        <div class="law-box">
+            <span class="law-title">Law of Healing</span>
+            No corrupted, shadowed, or harmful arts may be practiced within the House of Elrond.
+            <span class="judgment">Judgment: Cleansing rites or banishment from the Halls of Healing.</span>
+        </div>
+        <div class="law-box">
+            <span class="law-title">Law of Respect</span>
+            All who dwell or seek shelter here—elves, guests, loremasters, and healers—shall be treated with equal honor.
+            <span class="judgment">Judgment: Public apology or loss of privileges.</span>
+        </div>
+        <div class="law-box">
+            <span class="law-title">Law of Peaceful Arms</span>
+            Weapons must remain peace-tied and unused within the Valley of Rivendell.
+            <span class="judgment">Judgment: Confiscation or formal reprimand.</span>
+        </div>
+        <div class="law-box">
+            <span class="law-title">Law of the Hidden Paths</span>
+            The secret ways into Rivendell are not to be revealed without leave from Lord Elrond.
+            <span class="judgment">Judgment: Oath of silence or removal from strategic councils.</span>
+        </div>
+        <div class="law-box">
+            <span class="law-title">Law of Truth</span>
+            No deceit, false testimony, or manipulation shall take root in the Last Homely House.
+            <span class="judgment">Judgment: Correction of records or service to the Loremasters.</span>
+        </div>
+        <div class="law-box">
+            <span class="law-title">Law of Conduct</span>
+            Feasts, councils, and halls must remain places of dignity, respect, and restraint.
+            <span class="judgment">Judgment: Removal from events or assignment to humble service.</span>
+        </div>
+        <div class="law-box">
+            <span class="law-title">Law of Elrond’s Word</span>
+            The word and judgment of Lord Elrond are final and binding.
+            <span class="judgment">Judgment: As decreed by the Lord of Imladris.</span>
+        </div>
+        <p style="text-align: center; color: #7a94a8; font-style: italic; margin-top: 30px;">
+            "May the peace of Rivendell endure within these halls, and within all who walk them."
+        </p>
+    </section>
+
+    <section id="language">
+        <h2>The Elven Tongue</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Let all words spoken here reflect wisdom, courtesy, and unity.</p>
+        
+        <div class="lang-container">
+            <div class="lang-row">
+                <span class="elvish">Mae govannen</span>
+                <span class="translation">Well met (Greeting)</span>
+            </div>
+            <div class="lang-row">
+                <span class="elvish">Mellon</span>
+                <span class="translation">Friend</span>
+            </div>
+            <div class="lang-row">
+                <span class="elvish">Le suilon</span>
+                <span class="translation">I greet you (Formal)</span>
+            </div>
+            <div class="lang-row">
+                <span class="elvish">Estel</span>
+                <span class="translation">Hope</span>
+            </div>
+            <div class="lang-row">
+                <span class="elvish">Amin hiraetha</span>
+                <span class="translation">I am sorry</span>
+            </div>
+            <div class="lang-row">
+                <span class="elvish">Hantanyel</span>
+                <span class="translation">I thank you</span>
+            </div>
+            <div class="lang-row">
+                <span class="elvish">Namarië</span>
+                <span class="translation">Farewell</span>
+            </div>
+            <div class="lang-row">
+                <span class="elvish">A ni naid i gwaen</span>
+                <span class="translation">I must go</span>
+            </div>
         </div>
     </section>
 
