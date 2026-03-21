@@ -17,8 +17,12 @@
         }
 
         header {
-            background: linear-gradient(to bottom, #102030, #050b10);
-            padding: 100px 20px;
+            background: linear-gradient(to bottom, rgba(16, 32, 48, 0.6), #050b10), 
+                        url('Rivendell-Banner.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover; 
+            padding: 120px 20px;
             text-align: center;
             border-bottom: 2px solid #c5a059;
         }
@@ -29,7 +33,7 @@
             text-transform: uppercase;
             color: #c5a059;
             margin: 0;
-            text-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9), 0 0 20px rgba(197, 160, 89, 0.4);
         }
 
         .subtitle {
@@ -38,6 +42,7 @@
             font-size: 1.2rem;
             margin-top: 10px;
             letter-spacing: 2px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
         }
 
         nav {
@@ -87,7 +92,18 @@
             letter-spacing: 4px;
         }
 
-        /* Locations Grid */
+        .video-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        video {
+            max-width: 100%;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
         .location-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -136,7 +152,6 @@
             margin-bottom: 8px;
         }
 
-        /* Hierarchy & Laws Styles */
         .rank-box, .law-box {
             background: rgba(197, 160, 89, 0.05);
             border-left: 4px solid #c5a059;
@@ -165,7 +180,6 @@
             display: block;
         }
 
-        /* Language Table */
         .lang-container {
             width: 100%;
             border-collapse: collapse;
@@ -189,7 +203,6 @@
             color: #7a94a8;
         }
 
-        /* Footer & Buttons */
         .footer {
             text-align: center;
             padding: 60px;
@@ -243,6 +256,13 @@
             A community dedicated to the preservation of Elven lore, the defense of the Hidden Valley, 
             and the path of light in Middle-earth.
         </p>
+
+        <div class="video-container">
+            <video width="800" controls>
+                <source src="rivendellshowcase.mp4" type="video/mp4">
+                Ihr Browser unterstützt das Video-Tag nicht.
+            </video>
+        </div>
     </section>
 
     <section id="locations">
